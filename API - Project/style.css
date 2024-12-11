@@ -1,0 +1,140 @@
+:root {
+    --bg-primary: #F1F0E8;
+    --bg-secondary: #ECE9DE;
+    --bg-accent: #D97757;
+    --fc-primary: #3D3929;
+
+    --fs-secondary: 'Helvetica';
+
+   
+}
+
+@font-face {
+    font-family: 'Boogie';
+    src: url(/assets/fonts/BoogieSchoolSans-Middle4th.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--fc-primary)
+}
+
+body {
+    background-color: var(--bg-primary);
+    margin: 2rem; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'Boogie';
+    font-weight: 800;
+    font-size: clamp(3rem, 10vw, 7rem); /* Responsive font size */
+    text-align: center;
+    
+}
+
+#dropdown {
+    width: clamp(8rem, 20vw, 10rem); /* Responsive width */
+    height: 2rem;
+}
+
+.prompt h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive font size */
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.font-selector-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+span {
+    font-family: var(--fs-secondary);
+}
+
+.font-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(90%, 600px); /* Responsive width */
+    min-height: 12.5rem; /* Minimum height instead of fixed */
+    justify-content: center;
+    row-gap: 20px;
+    font-size: clamp(1.2rem, 4vw, 2rem); /* Responsive font size */
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    border-radius: 15px;
+    background-color: var(--bg-secondary)
+}
+
+.font-selector-styling {
+    display: flex;
+    width: min(90%, 800px); /* Responsive width */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Use gap instead of space-around */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+#randomButton {
+    position: relative;
+    display: inline-block;
+    padding: 10px 1.5rem;
+    border: 2px solid var(--fc-primary);
+    color: var(--fc-primary);
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: clamp(1rem, 3vw, 20px); /* Responsive font size */
+}
+
+#randomButton:hover {
+    border: 2px solid var(--fc-primary);
+    background-color: var(--bg-accent);
+    cursor: pointer;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    body {
+        margin: 1rem;
+    }
+
+    .font-selector-styling {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 0.5rem;
+    }
+
+    #dropdown, #randomButton {
+        width: 100%;
+        max-width: 300px;
+    }
+}

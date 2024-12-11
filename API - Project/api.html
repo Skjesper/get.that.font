@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetYourFont</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+    <h1>GET THAT FONT</h1>
+    </section>
+    <section class="font-explorer" aria-label="Google Fonts Randomizer">
+    <div class="fontWrapper">
+        <div id="fontDiv" class="font-selector">
+            <div id="fontNameContainer" class="font-details">
+                <span id="fontNameLabel" class="label">Family: </span>
+                <span id="fontName" class="value">Select a category and randomize!</span>
+            </div>
+            <div id="fontStyle" class="font-category"></div>
+            
+            
+            
+        </div>
+            <div class="generateWrapper">
+            <select id="dropdown" aria-label="Font category selector"></select>
+            <button id="randomButton" type="button">GET THAT FONT</button>
+            </div>  
+    </div>    
+    </section>
+    <script src="./api.js"></script>
+</body>
+</html>
+
