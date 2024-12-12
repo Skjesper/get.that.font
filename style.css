@@ -48,8 +48,17 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1.3rem, 5vw, 3rem);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
 h3 {
     font-size: clamp(1.6rem, 5vw, 2.2rem);
+    font-family: 'Boogie';
     line-height: 1.2;
     min-height: 2.4rem;
     max-height: 3.4rem;
@@ -63,6 +72,7 @@ h3 {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
 }
 
 span {
@@ -77,13 +87,8 @@ span {
     height: 2rem;
 }
 
-/* Prompt Section */
-.prompt h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1.3rem, 5vw, 3rem);
-    text-align: center;
-    margin-top: 1rem;
-}
+
+
 
 /* Layout Containers */
 .font-selector-container {
