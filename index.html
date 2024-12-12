@@ -7,35 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <main>
-        <section>
+        <section class="heading">
             <h1>GET THAT FONT</h1>
-            <h2> Select a category and randomize!</h2>
+            <h2>Select a category and randomize!</h2>
         </section>
 
         <section class="font-selector-container">
-            <article class="prompt">
-                
-            </article>
-            <article id="font-selection" class="font-selector">
-                
+            <div id="font-selection" class="font-selector">
                 <h3 id="font-selection-name">CLICK THE BUTTON</h3>
                 <p id="category-name"></p>
-                <p id='download-link'></p>
-            </article>
+                <p id="download-link"></p>
+            </div>
 
-            <article id="font-selection-styling" class="font-selector-styling">
+            <div id="font-selection-styling" class="font-selector-styling">
                 <select id="dropdown" aria-label="Font category selector"></select>
                 <button id="randomButton" type="button">GET THAT FONT</button>
-            </article>
+            </div>
         </section>
     </main>
-
-
-
 
     <script src="./api.js"></script>
 </body>
 </html>
-
