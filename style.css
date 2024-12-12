@@ -1,30 +1,35 @@
+/* CSS Variables - Custom properties for consistent theming */
 :root {
-    --bg-primary: #F1F0E8;
-    --bg-secondary: #ECE9DE;
-    --bg-accent: #D97757;
-    --fc-primary: #3D3929;
+    /* Colors */
+    --bg-primary: #F1F0E8;    /* Main background color */
+    --bg-secondary: #ECE9DE;  /* Secondary background for components */
+    --bg-accent: #D97757;     /* Accent color for interactive elements */
+    --fc-primary: #3D3929;    /* Primary font color */
 
+    /* Typography */
     --fs-secondary: 'Helvetica';
-
-    --fs-h3: 2.5rem
-   
+    --fs-h3: 2.5rem;
 }
 
+/* Custom Font Import */
 @font-face {
     font-family: 'Boogie';
     src: url(./assets/fonts/BoogieSchoolSans-Middle4th.ttf);
 }
 
+
 * {
     margin: 0;
     padding: 0;
-    color: var(--fc-primary)
+    color: var(--fc-primary);
 }
+
 
 body {
     background-color: var(--bg-primary);
-    margin: 2rem; 
+    margin: 2rem;
 }
+
 
 a {
     text-decoration: none;
@@ -35,12 +40,12 @@ a:hover {
     cursor: pointer;
 }
 
+/* Typography Styles */
 h1 {
     font-family: 'Boogie';
     font-weight: 800;
-    font-size: clamp(2.5rem, 10vw, 7rem); /* Responsive font size */
+    font-size: clamp(2.5rem, 10vw, 7rem);  /* Responsive scaling between 2.5rem and 7rem */
     text-align: center;
-    
 }
 
 h3 {
@@ -52,34 +57,12 @@ h3 {
     display: flex;
     align-items: center;
     transform-origin: center;
-    transform: scale(var(--font-scale, 1));  /* Default scale is 1 */
+    transform: scale(var(--font-scale, 1));
+    /* Text rendering optimizations */
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-#dropdown {
-    width: clamp(8rem, 20vw, 10rem); /* Responsive width */
-    height: 2rem;
-}
-
-.prompt h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1.3rem, 5vw, 3rem); /* Responsive font size */
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.font-selector-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    
 }
 
 span {
@@ -88,35 +71,56 @@ span {
     font-weight: 700;
 }
 
+/* Component Styles */
+#dropdown {
+    width: clamp(8rem, 20vw, 10rem);
+    height: 2rem;
+}
+
+/* Prompt Section */
+.prompt h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1.3rem, 5vw, 3rem);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Layout Containers */
+.font-selector-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .font-selector {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: min(90%, 600px); /* Responsive width */
-    min-height: 20rem; /* Minimum height instead of fixed */
-
+    width: min(90%, 600px);
+    min-height: 20rem;
     justify-content: center;
     row-gap: 20px;
-    font-size: clamp(1.2rem, 4vw, 2rem); /* Responsive font size */
+    font-size: clamp(1.2rem, 4vw, 2rem);
     padding: 2rem 1rem;
     margin: 2rem 0;
     border-radius: 15px;
-    background-color: var(--bg-secondary)
+    background-color: var(--bg-secondary);
 }
 
 .font-selector-styling {
     display: flex;
-    width: min(90%, 800px); /* Responsive width */
+    width: min(90%, 800px);
     align-items: center;
     justify-content: center;
-    gap: 2rem; /* Use gap instead of space-around */
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-#category-name {
-    margin-top: 5rem;
-}
-
+/* Button Styles */
 #randomButton {
     position: relative;
     display: inline-block;
@@ -127,11 +131,10 @@ span {
     text-decoration: none;
     border-radius: 12px;
     font-weight: 600;
-    font-size: clamp(1rem, 3vw, 20px); /* Responsive font size */
+    font-size: clamp(1rem, 3vw, 20px);
 }
 
 #randomButton:hover {
-    
     cursor: pointer;
 }
 
@@ -141,7 +144,12 @@ button {
     background-color: transparent;
 }
 
-/* Media queries for smaller screens */
+/* Category Spacing */
+#category-name {
+    margin-top: 5rem;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     body {
         margin: 1rem;
@@ -161,8 +169,4 @@ button {
         width: 100%;
         max-width: 300px;
     }
-
-
-
-
 }
