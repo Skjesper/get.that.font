@@ -2,6 +2,9 @@
 
 A simple web application that helps you discover new fonts through random selection from the Google Fonts API.
 
+I did this project early in my coding career, so i wanted to show the website. But I would have done this site differently today, 
+and will update the code in the future
+
 ## About
 
 "Get That Font" is a lightweight web tool that allows you to:
